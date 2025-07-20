@@ -1,10 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Initialize AOS Animation Library
   AOS.init({
+    offset: 120,
     duration: 800,
     easing: "ease-in-out",
-    once: false,
-    mirror: true,
+    once: true,
+    mirror: false,
   });
 
   // Preloader
