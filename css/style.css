@@ -278,12 +278,16 @@ img {
   padding: 15px 0;
   transition: var(--transition);
   z-index: 999;
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1); /* إضافة ظل */
+  box-shadow: 0 30px 20px rgba(0, 0, 0, 0.1); /* إضافة ظل */
 }
 
 .header.scrolled {
   padding: 10px 0;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-toggler{
+  background: var(--primary-color);
 }
 
 .navbar-brand {
@@ -299,6 +303,14 @@ img {
   margin-left: 10px;
 }
 
+.navbar-brand span {
+  color: #000 !important;
+}
+
+.navbar-brand span:hover {
+  color: var(--primary-color) !important;
+}
+
 .navbar-nav .nav-link {
   color: var(--dark-color); /* تغيير لون النص إلى داكن */
   font-weight: 600;
@@ -312,7 +324,7 @@ img {
   position: absolute;
   width: 0;
   height: 2px;
-  background: #fff;
+  background: var(--primary-color);
   bottom: 0;
   left: 0;
   transition: var(--transition);
@@ -983,6 +995,16 @@ img {
   position: relative;
   max-width: 100%;
   height: auto;
+  display: flex;
+  justify-content: center; /* لتوسيط الصورة أفقيًا */
+  align-items: center; /* لتوسيط الصورة عموديًا */
+  margin: 0 auto; /* لتوسيط العنصر نفسه */
+}
+
+.animated-illustration img {
+  position: relative;
+  z-index: 2; /* للتأكد من ظهور الصورة فوق النقاط */
+  max-width: 80%; /* يمكنك تعديل هذه النسبة حسب الحاجة */
 }
 
 .animated-dots {
@@ -1117,6 +1139,7 @@ img {
   .contact-card {
     flex-direction: column;
     text-align: center;
+    align-items: center;
   }
 
   .contact-icon {
@@ -1401,6 +1424,7 @@ img {
 
   .navbar-nav .nav-link {
     margin: 5px 0;
+    color: #fff;
   }
 
   .about-content {
@@ -1495,9 +1519,9 @@ img {
     margin-top: 15px;
   }
 
-  .footer-links a {
+  /* .footer-links a {
     margin: 0 7.5px;
-  }
+  } */
 }
 
 /* Add these styles to your existing CSS file */
